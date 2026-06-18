@@ -53,3 +53,60 @@ The habit checklist resets every day. There are no streaks, no failure states, a
 ---
 
 ## Project Structure
+focuslink/
+
+│
+
+├── screens/
+
+│   ├── HomeScreen.js       # Main app screen with checklist, Big One, mood bar
+
+│   ├── ChatScreen.js       # AI coach chatbot interface
+
+│   └── SettingsScreen.js   # User settings
+
+│
+
+├── hooks/
+
+│   └── useEncouragements.js  # Custom hook for hourly notification system
+
+│
+
+├── assets/                 # App icons and splash screen images
+
+├── App.js                  # Root component and navigation
+
+├── firebaseConfig.js       # Firebase initialisation
+
+├── openaiConfig.js         # OpenAI API configuration (not included in repo)
+
+├── theme.js                # Global colour palette and typography
+
+└── package.json            # Dependencies
+
+---
+
+## Design Philosophy
+
+Every decision in FocusLink was made through the lens of cognitive compassion. The colour palette is soft and calming. Typography is clear and approachable. Interactive elements follow a low effort model where the user never has to guess or work to navigate the app. Reward elements provide emotional closure without gamification pressure. The AI interactions are short, warm, and validating.
+
+The goal was not to build a productivity tool. It was to build a companion.
+
+---
+
+## Note on API Keys
+
+This repository does not include openaiConfig.js or any live API credentials. To run the app locally, create an openaiConfig.js file in the root directory with your own OpenAI API key in the following format:
+
+```javascript
+export const OPENAI_API_KEY = "your_key_here";
+```
+
+---
+
+## About
+
+Built by **Bianca Khambatta** as a final year capstone project for the Bachelor of Data Science degree at Savitribai Phule Pune University. Graded A+ by the Department of Technology.
+
+[LinkedIn](https://www.linkedin.com/in/bianca-khambatta-4b8a37400) · [GitHub](https://github.com/Bianca-Khambatta)
