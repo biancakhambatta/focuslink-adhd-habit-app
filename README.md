@@ -105,6 +105,13 @@ export const OPENAI_API_KEY = "your_key_here";
 
 ---
 
+## Research Paper
+The full capstone thesis documenting the design rationale, psychological 
+foundations, technical implementation and evaluation of FocusLink is 
+included in this repository.
+
+[Read the paper](Capstone_Report_Final.pdf)
+
 ## About
 
 Built by **Bianca Khambatta** as a final year capstone project for the Bachelor of Data Science degree at Savitribai Phule Pune University. Graded A+ by the Department of Technology.
