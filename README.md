@@ -1,119 +1,31 @@
-# FocusLink — AI Powered ADHD Habit Tracking App
+# FocusLink
 
-> Final Year Capstone Project | Savitribai Phule Pune University | Grade: A+
+**An AI-powered habit tracker for people with ADHD.**
 
----
+FocusLink replaces the long to-do list with one daily intention, gentle habit suggestions based on how you feel, and a supportive AI coach. There are no streaks and no failure states, so a missed day never feels like losing.
 
-## Overview
-
-FocusLink is a mobile application built for individuals with ADHD who struggle with conventional habit tracking tools. Most productivity apps are designed for neurotypical users and unintentionally create friction, overwhelm, and shame for neurodivergent minds. FocusLink was designed the other way around, starting from the cognitive and emotional reality of ADHD and building technology to support it.
-
-The app was built using React Native and Firebase, with OpenAI's GPT 3.5 Turbo integrated for personalised habit suggestions and conversational coaching.
-
----
-
-## The Problem
-
-Individuals with ADHD experience real neurological challenges with working memory, emotional regulation, task initiation, and sustained attention. These are not motivation problems. Existing habit apps respond by adding more notifications, more streaks, and more gamification, all of which increase cognitive load and emotional pressure for ADHD users. FocusLink takes the opposite approach.
+Final-year capstone project, Pune University (Grade A+). Designed and built solo.
 
 ---
 
 ## Features
 
-**The Big One**
-A single daily intention prompt at the top of the home screen. Instead of a long to do list, the user answers one question: what is the one thing they want to accomplish today? This directly addresses the prioritisation and task initiation barriers that are central to ADHD.
+- **The Big One:** a single daily intention on the home screen instead of a long list
+- **Mood-based habit suggestions:** tap a mood and the app asks OpenAI for a habit that fits it
+- **AI Coach:** a chatbot (GPT-3.5 Turbo) that gives short, supportive replies when you feel stuck
+- **Visual rewards:** a celebration appears after you complete three habits in a day
+- **Hourly encouragement:** a randomised, encouraging notification each hour while the app runs
+- **Daily reset:** the checklist resets every day, with no streaks or penalties
 
-**Mood Based Habit Suggestions**
-An emoji bar lets users tap their current mood. The app sends that input to the OpenAI API and returns a personalised, context aware habit suggestion based on how the user is actually feeling. Structure adapts to the user rather than demanding the user adapt to it.
-
-**AI Coach Chatbot**
-A friendly AI chatbot powered by GPT 3.5 Turbo acts as an on demand coach. It responds in short, affirming, non judgmental language and provides suggestions, encouragement, and gentle redirection whenever the user feels stuck or overwhelmed.
-
-**Visual Rewards**
-When a user completes three habits in a day, a celebratory modal appears. This provides immediate positive reinforcement that activates dopamine pathways which are often under responsive in ADHD brains, without the pressure of streaks or perfectionism.
-
-**Hourly Encouragement Notifications**
-A custom React Native hook sends a randomised encouraging message every hour while the app is running. These nudges interrupt time blindness and simulate the kind of external structure that many ADHD individuals rely on to stay on track.
-
-**Daily Reset Checklist**
-The habit checklist resets every day. There are no streaks, no failure states, and no judgment. Each day is a clean start.
-
----
-
-## Technology Stack
+## Tech stack
 
 | Tool | Purpose |
 |---|---|
-| React Native | Cross platform mobile app development (iOS and Android) |
-| Firebase Firestore | Real time cloud database for habit storage |
-| OpenAI GPT 3.5 Turbo | AI powered habit suggestions and chatbot coaching |
-| Expo Notifications | Local notification scheduling for hourly encouragements |
-| Axios | API communication with OpenAI |
+| React Native (Expo) | Cross-platform iOS and Android app |
+| React Navigation | Moving between screens |
+| Firebase Firestore | Cloud database for habits |
+| OpenAI GPT-3.5 Turbo | Habit suggestions and AI coaching |
+| Expo Notifications | Scheduling the hourly encouragements |
+| Axios | Calls to the OpenAI API |
 
----
-
-## Project Structure
-focuslink/
-
-│
-
-├── screens/
-
-│   ├── HomeScreen.js       # Main app screen with checklist, Big One, mood bar
-
-│   ├── ChatScreen.js       # AI coach chatbot interface
-
-│   └── SettingsScreen.js   # User settings
-
-│
-
-├── hooks/
-
-│   └── useEncouragements.js  # Custom hook for hourly notification system
-
-│
-
-├── assets/                 # App icons and splash screen images
-
-├── App.js                  # Root component and navigation
-
-├── firebaseConfig.js       # Firebase initialisation
-
-├── openaiConfig.js         # OpenAI API configuration (not included in repo)
-
-├── theme.js                # Global colour palette and typography
-
-└── package.json            # Dependencies
-
----
-
-## Design Philosophy
-
-Every decision in FocusLink was made through the lens of cognitive compassion. The colour palette is soft and calming. Typography is clear and approachable. Interactive elements follow a low effort model where the user never has to guess or work to navigate the app. Reward elements provide emotional closure without gamification pressure. The AI interactions are short, warm, and validating.
-
-The goal was not to build a productivity tool. It was to build a companion.
-
----
-
-## Note on API Keys
-
-This repository does not include openaiConfig.js or any live API credentials. To run the app locally, create an openaiConfig.js file in the root directory with your own OpenAI API key in the following format:
-
-```javascript
-export const OPENAI_API_KEY = "your_key_here";
-```
-
----
-
-## Research Paper
-The full capstone thesis documenting the design rationale, psychological 
-foundations, technical implementation and evaluation of FocusLink is 
-included in this repository.
-
-[Read the paper](Capstone_Report_Final.pdf)
-
-## About
-
-Built by **Bianca Khambatta** as a final year capstone project for the Bachelor of Data Science degree at Savitribai Phule Pune University. Graded A+ by the Department of Technology.
-
-[LinkedIn](https://www.linkedin.com/in/bianca-khambatta-4b8a37400) · [GitHub](https://github.com/Bianca-Khambatta)
+## Project structure
